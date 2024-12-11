@@ -1,7 +1,7 @@
 @use '/public/styles/variables' as *;
 
 .filterBar {
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   background: #FFF;
   position: relative;
@@ -16,7 +16,8 @@
   .filterItems {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 
     .item {
       display: flex;
@@ -57,5 +58,11 @@
       color: $primary-color;
       border-bottom: 1px solid $primary-color;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .filterBar {
+    padding: 2rem;
   }
 }
