@@ -1,0 +1,30 @@
+@use '/public/styles/variables' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .container {
+    padding: 0 10%;
+
+    .jobCards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .noResults {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark-cyan;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .jobCards {
+        gap: 4rem;
+      }
+    }
+  }
+}

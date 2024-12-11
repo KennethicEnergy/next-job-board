@@ -1,0 +1,117 @@
+@use '/public/styles/variables' as *;
+
+.jobCard {
+  height: 10rem;
+  width: 100%;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+  box-shadow: 0px -1px 20px 0px $dark-cyan;
+  border-radius: 8px;
+  gap: 0.5rem;
+
+  .jobLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .jobIntro {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      font-weight: 700;
+
+      .company {
+        color: $primary-color;
+      }
+
+      .new {
+        background: $primary-color;
+        color: $background-color;
+      }
+
+      .featured {
+        background: #000;
+        color: #FFF;
+      }
+
+      .new, .featured {
+        padding: 5px 10px;
+        border-radius: 15px;
+      }
+    }
+
+    .jobDetails {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .jobInfo {
+        display: flex;
+        gap: 0.5rem;
+        color: $dark-cyan;
+      }
+
+      .position {
+        font-weight: 700;
+        font-size: 20px;
+        color: #000;
+
+        &:hover {
+          color: $primary-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .jobRight {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+
+    .tag {
+      background-color: $background-color;
+      color: $primary-color;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $background-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+
+    img {
+      position: absolute !important;
+      top: -38px !important;
+      height: 75px !important;
+      width: 75px !important;
+    }
+
+    .jobLeft {
+      width: 100%;
+      padding: 2rem 0 1rem;
+      border-bottom: 1px solid $dark-cyan;
+      justify-content: flex-start;
+    }
+
+    .jobRight {
+      padding-top: 1rem;
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+}
