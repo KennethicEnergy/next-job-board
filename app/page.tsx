@@ -1,15 +1,17 @@
 "use client"
+
 import { useEffect, useState } from "react";
-import styles from "./page.module.scss";
-import Header from "./components/header/header";
+
 import FilterBar from "./components/filter-bar/filter-bar";
-import JobCard from "./components/job-card/job-card";
+import Header from "./components/header/header";
 import { Job } from "./constants/types";
+import JobCard from "./components/job-card/job-card";
+import styles from "./page.module.scss";
 
 export default function Home() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [filters, setFilters] = useState<string[]>([
-    "Frontend", "CSS", "JavaScript"
+    "Front-End", "CSS", "JavaScript"
   ]);
 
   const filterJobs = () => {
